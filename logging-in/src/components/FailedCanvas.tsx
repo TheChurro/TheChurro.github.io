@@ -1,0 +1,201 @@
+import * as React from "react";
+import { RouteComponentProps } from "react-router-dom";
+
+import DashbordCardBox from "./DashboardCardBox";
+
+export interface FailedCanvasProps { };
+export interface FailedCanvasState { };
+
+export default class FailedCanvas extends React.Component<RouteComponentProps<FailedCanvasProps>, FailedCanvasState> {
+  constructor(props: RouteComponentProps<FailedCanvasProps>) {
+    super(props);
+  }
+  render() {
+    return (
+      <React.Fragment>
+      <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_normal_contrast/bundles/common-0ac8eba80e.css" />
+      <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/f86d2105b7f774e660ef549a2c478bae/variables-8391c84da435c9cfceea2b2b3317ff66.css" />
+      <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_normal_contrast/bundles/react_todo_sidebar-1e00bf9847.css" />
+      <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_normal_contrast/bundles/dashboard-a085ab90c2.css" />
+      <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_normal_contrast/bundles/dashboard_card-c3e461ecf2.css" />
+      <link rel="stylesheet" media="all" href="https://instructure-uploads.s3.amazonaws.com/account_23490000000000001/attachments/731607/ek.css" />
+      <div className="with-right-side primary-nav-transitions context-user_18031 webkit safari ff no-touch" data-gr-c-s-loaded="true">
+        <div id="application" className="ic-app">
+          <header id="header" className="ic-app-header no-print">
+            {sidebar}
+            {secondaryNav}
+          </header>
+          <div id="wrapper" className="ic-Layout-wrapper">
+            <div id="main" className="ic-Layout-columns">
+              <div className="ic-Layout-watermark"></div>
+              <div id="not_right_side" className="ic-app-main-content">
+                <DashbordCardBox/>
+                {todos}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </React.Fragment>
+    )
+  }
+}
+
+const sidebar = (
+  <div role="region" className="ic-app-header__main-navigation" aria-label="Global Navigation">
+    <ul id="menu" className="ic-app-header__menu-list">
+      <li className="ic-app-header__menu-list-item  ic-app-header__menu-list-item--active">
+        <a id="global_nav_dashboard_link" className="ic-app-header__menu-list-link">
+          <div className="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enableBackground="new 0 0 280 200" xmlSpace="preserve">
+              <path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path>
+            </svg>
+          </div>
+          <div className="menu-item__text">Dashboard</div>
+        </a>
+      </li>
+      <li className="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_courses_link" role="button" className="ic-app-header__menu-list-link">
+          <div className="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enableBackground="new 0 0 280 259" xmlSpace="preserve">
+              <path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path>
+            </svg>
+          </div>
+          <div className="menu-item__text">
+            Courses
+          </div>
+        </a>
+      </li>
+      <li className="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_groups_link" role="button" className="ic-app-header__menu-list-link">
+          <div className="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--groups" viewBox="0 0 200 135">
+              <path d="M134.5 129.4c0-1.1 0-19.8-6.2-31.1-4.5-8.5-16.4-12.4-35-19.2-1.7-.6-3.4-1.1-5.1-1.7v-8.5c5.6-5.1 8.5-12.4 8.5-20.3V29.4C96.6 13 83.6 0 67.2 0S37.9 13 37.9 29.4v19.2c0 7.3 3.4 14.7 8.5 20.3v8.5c-1.7.6-3.4 1.1-5.1 1.7-18.6 6.2-30.5 10.7-35 19.2C0 109.6 0 128.8 0 129.4c0 3.4 2.3 5.6 5.6 5.6h123.7c3.5 0 5.7-2.3 5.2-5.6zm-123.2-5.7c.6-5.6 1.7-14.7 3.4-19.8C17 98.8 30 94.3 43.5 89.8c2.8-1.1 5.6-2.3 9-3.4 2.3-.6 4-2.8 4-5.1V66.7c0-1.7-.6-3.4-1.7-4.5-4-3.4-6.2-8.5-6.2-13.6V29.4c0-10.2 7.9-18.1 18.1-18.1s18.1 7.9 18.1 18.1v19.2c0 5.1-2.3 10.2-6.2 13.6-1.1 1.1-1.7 2.8-1.7 4.5v14.7c0 2.3 1.7 4.5 4 5.1 2.8 1.1 6.2 2.3 9 3.4 13.6 5.1 26.6 9.6 28.8 14.1 2.8 5.1 4 13.6 4.5 19.8H11.3zM196 79.1c-2.8-6.2-11.3-9.6-22.6-13.6l-1.7-.6v-3.4c4.5-4 6.8-9.6 6.8-15.8V35c0-12.4-9.6-22-22-22s-22 10.2-22 22v10.7c0 6.2 2.3 11.9 6.8 15.8V65l-1.7.6c-7.3 2.8-13 4.5-16.9 7.3-1.7 1.1-2.3 2.8-2.3 5.1.6 1.7 1.7 3.4 3.4 4.5 7.9 4 12.4 7.3 14.1 10.7 2.3 4.5 4 10.2 5.1 18.1.6 2.3 2.8 4.5 5.6 4.5h45.8c3.4 0 5.6-2.8 5.6-5.1 0-3.9 0-24.3-4-31.6zm-42.9 25.4c-1.1-6.8-2.8-12.4-5.1-16.9-1.7-4-5.1-6.8-9.6-10.2 1.7-1.1 3.4-1.7 5.1-2.3l5.6-2.3c1.7-.6 3.4-2.8 3.4-5.1v-9.6c0-1.7-.6-3.4-2.3-4.5-2.8-1.7-4.5-5.1-4.5-8.5V34.5c0-6.2 4.5-10.7 10.7-10.7s10.7 5.1 10.7 10.7v10.7c0 3.4-1.7 6.2-4.5 8.5-1.1 1.1-2.3 2.8-2.3 4.5v10.2c0 2.3 1.1 4.5 3.4 5.1l5.6 2.3c6.8 2.3 15.3 5.6 16.4 7.9 1.7 2.8 2.8 12.4 2.8 20.9h-35.4z"></path>
+            </svg>
+          </div>
+          <div className="menu-item__text">
+            Groups
+          </div>
+        </a>
+      </li>
+      <li className="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_calendar_link" className="ic-app-header__menu-list-link">
+          <div className="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enableBackground="new 0 0 280 280" xmlSpace="preserve">
+              <path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path>
+            </svg>
+          </div>
+          <div className="menu-item__text">
+            Calendar
+          </div>
+        </a>
+      </li>
+      <li className="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_conversations_link" className="ic-app-header__menu-list-link">
+          <div className="menu-item-icon-container">
+            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enableBackground="new 0 0 280 280" xmlSpace="preserve">
+                <path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path>
+              </svg>
+            </span>
+            <span className="menu-item__badge"></span>
+          </div>
+          <div className="menu-item__text">
+            Inbox
+          </div>
+        </a>
+      </li>
+      <li className="ic-app-header__menu-list-item">
+        <a id="global_nav_help_link" role="button" className="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button">
+          <div className="menu-item-icon-container" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enableBackground="new 0 0 200 200" xmlSpace="preserve" fill="currentColor">
+              <path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65"
+                transform="translate(-5.2 -5.2)"></path>
+            </svg>
+          </div>
+          <div className="menu-item__text">
+            Help
+          </div>
+        </a> </li>
+    </ul>
+  </div>
+);
+
+const secondaryNav = (
+  <div className="ic-app-header__secondary-navigation">
+    <ul className="ic-app-header__menu-list">
+      <li className="menu-item ic-app-header__menu-list-item">
+        <button id="primaryNavToggle" className="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                  " title="Expand global navigation
+                  ">
+          <div className="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xmlSpace="preserve">
+              <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+            </svg>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
+);
+
+const todos = (
+  <div id="right-side-wrapper" className="ic-app-main-content__secondary" style={{display: "block"}}>
+    <aside id="right-side" role="complementary">
+      <div className="ic-sidebar-logo">
+        <img className="ic-sidebar-logo__image" alt="Canvas by Instructure" src="https://instructure-uploads.s3.amazonaws.com/account_23490000000000001/attachments/94311/wordmark.gothic.rgb.maroon.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1941807709&amp;Signature=EKd2XZunvzZbPkDiQK7TJoRt9sw%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0"/>
+      </div>
+      <div className="Sidebar__TodoListContainer">
+        <div>
+          <h2 className="todo-list-header"><span tabIndex={-1}>Error getting content</span></h2>
+          <span className="cjUyb_bGBk cjUyb_doqw cjUyb_eQnG">HTTP 403 - Forbidden</span>
+        </div>
+      </div>
+      <div className="events_list recent_feedback">
+        <div className="h2 shared-space">
+          <h2>Error getting content</h2>
+          <span>HTTP 403 - Forbidden</span>
+          <a href="/">Detailed error description</a>
+        </div>
+        <ul className="right-side-list events">
+          <li style={{}} className="event">
+            <a data-track-category="dashboard" data-track-label="recent feedback" className="recent_feedback_icon" href="/">
+              <i className="icon-check"></i>
+              <div className="event-details">
+                <b className="event-details__title recent_feedback_title">
+                  Error getting content
+                </b>
+                <p className="event-details__context">
+                  HTTP 403 - Forbidden
+                </p>
+                Detailed error description
+              </div>
+              <div className="clear"></div>
+            </a>
+            <div className="clear"></div>
+          </li>
+          <li style={{}} className="event">
+            <a data-track-category="dashboard" data-track-label="recent feedback" className="recent_feedback_icon" href="/">
+              <i className="icon-check"></i>
+              <div className="event-details">
+                <b className="event-details__title recent_feedback_title">
+                  Error getting content
+                </b>
+                <p className="event-details__context">
+                  HTTP 403 - Forbidden
+                </p>
+                Detailed error description
+              </div>
+              <div className="clear"></div>
+            </a>
+            <div className="clear"></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a href="/" className="Button button-sidebar-wide">
+          View Grades
+        </a>
+      </div>
+    </aside>
+  </div>
+)
