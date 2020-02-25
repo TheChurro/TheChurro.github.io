@@ -1,0 +1,24 @@
+{
+  "name": "aframeworkshop",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/aframe": "^0.8.4",
+    "@types/node": "^13.7.2",
+    "@types/p5": "^0.9.0",
+    "aframe": "^1.0.4",
+    "p5": "^0.10.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "start": "run-p start-compile start-run",
+    "start-compile": "tsc --watch",
+    "start-run": "browser-sync start --server -w"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "browser-sync": "^2.26.7"
+  }
+}

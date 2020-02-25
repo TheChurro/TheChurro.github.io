@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <!-- animations libraries -->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.1/dist/aframe-animation-timeline-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-timeline-component@2.0.0/dist/aframe-animation-timeline-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene animation-timeline__1 = "timeline: #timeline; loop: true">
+      <a-assets>
+        <a-timeline id="timeline">
+          <a-timeline-animation select="#bobomb" name="exitpipe"></a-timeline-animation>
+          <a-timeline-animation select="#bobomb" name="walkoff"></a-timeline-animation>
+          <a-timeline-animation select="#bobomb" name="falloff"></a-timeline-animation>
+          <a-timeline-animation select="#bobomb" name="exitoff"></a-timeline-animation>
+        </a-timeline>
+        <img id="skyTexture" src="images/starmap.jpg">
+        <a-asset-item id="sanic" src="models/Sanic/model.gltf"></a-asset-item>
+        <a-asset-item id="warp-pipe" src="models/Warp-Pipe/model.gltf"></a-asset-item>
+        <a-asset-item id="bob-omb" src="models/Bob-omb/model.gltf"></a-asset-item>
+      </a-assets>
+      <a-entity static-body
+        geometry = "primitive: plane"
+        scale    = "10 10 10"
+        material = "color: green"
+        rotation = "-90 0 0"
+      ></a-entity>
+
+      <a-entity
+        position = "0 0 0"
+        animation = "property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop: true"
+      >
+        <a-gltf-model
+          src = "#sanic"
+          position = "0 1 5"
+        ></a-gltf-model>
+      </a-entity>
+      <a-gltf-model src="#warp-pipe" position = "0 -1.4 0"></a-gltf-model>
+      <a-gltf-model
+        id  = "bobomb"
+        src = "#bob-omb"
+        animation__exitpipe =
+            "property: position; from: 1.020 -1.280 -0.475; to: 1.020 0.292 -0.475"
+        animation__walkoff =
+            "property: position; from: 1.020 0.292 -0.475; to: -0.103 0.076 0.000"
+        animation__falloff =
+            "property: position; from: -0.103 0.076 0.000; to: -0.103 -1.132 0.000"
+        animation__exitoff =
+            "property: position; from: -0.103 -1.132 0.000; to: -5 -1.132 0.000"
+      ></a-gltf-model>
+      <a-text
+        text     = "value: Credits"
+        position = "0 6 -10"
+      ></a-text>
+      <a-text
+        text="value: &quot;Sanic&quot; by Stick Sonic 1003 / CC BY"
+        link="highlighted: true; href: https://poly.google.com/view/98qJ_s3doh9;"
+        position = "0 5 -10"
+      ></a-text>
+      <a-text
+        text="value: &quot;Bob-omb&quot; by Stick Sonic 1003 / CC BY"
+        link="highlighted: true; href: https://poly.google.com/view/aH8z6yLEdqG;"
+        position = "0 4 -10"
+      ></a-text>
+      <a-text
+        text="value: &quot;Warp Pipe&quot; by Carson Salonia / CC BY"
+        link="highlighted: true; href: https://poly.google.com/view/1JbkEeIssMV;"
+        position = "0 3 -10"
+      ></a-text>
+      <a-text
+        text="value: Stick Sonic 1003 Homepage: https://poly.google.com/user/3IYe26VR_8Z"
+        link="highlighted: true; href: https://poly.google.com/user/3IYe26VR_8Z;"
+        position = "0 2 -10"
+      ></a-text>
+      <a-text
+        text="value: Carson Salonia Homepage: https://poly.google.com/user/93jn32erLeK"
+        link="highlighted: true; href: https://poly.google.com/user/93jn32erLeK;"
+        position = "0 1 -10"
+      ></a-text>
+      <a-text
+        text="value: CC BY License Page"
+        link="highlighted: true; href: https://creativecommons.org/licenses/by/2.0/;"
+        position = "0 0 -10"
+      ></a-text>
+
+      <a-sky src = "#skyTexture"></a-sky>
+      <a-entity
+        position = "0 10 0"
+        particle-system = "preset: snow; size: 5;"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
