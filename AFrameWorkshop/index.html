@@ -23,6 +23,9 @@
     <!-- animations libraries -->
     <script src="https://unpkg.com/aframe-animation-component@^4.1.1/dist/aframe-animation-timeline-component.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-timeline-component@2.0.0/dist/aframe-animation-timeline-component.min.js"></script>
+
+    <!-- vr controls -->
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
   </head>
   <body>
     <a-scene animation-timeline__1 = "timeline: #timeline; loop: true">
@@ -38,6 +41,15 @@
         <a-asset-item id="warp-pipe" src="models/Warp-Pipe/model.gltf"></a-asset-item>
         <a-asset-item id="bob-omb" src="models/Bob-omb/model.gltf"></a-asset-item>
       </a-assets>
+
+      <a-entity id="cameraRig">
+        <a-entity id="head" camera="active: true" look-controls wasd-controls position="0 1.6 0"></a-entity>
+        <a-entity oculus-touch-controls="hand: left" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+        <a-entity oculus-touch-controls="hand: right" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+        <a-entity vive-controls="hand: left" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+        <a-entity vive-controls="hand: right" teleport-controls="button: trigger; cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity
+      </a-entity>
+
       <a-entity static-body
         geometry = "primitive: plane"
         scale    = "10 10 10"
